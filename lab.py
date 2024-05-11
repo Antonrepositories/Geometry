@@ -202,14 +202,15 @@ def welzl(P):
 # Driver Code
 if __name__ == '__main__':
     a = []
-    a = generate_random_points(2000)
+    q = int(input("Enter amout of points to generate: "))
+    a = generate_random_points(q)
     n = len(a)
     a.sort()
     ans = divide(a)
     print('Convex Hull:')
     for x in ans:
         print(int(x[0]), int(x[1]))
-    print(ans)
+    #print(ans)
     x_coords = [point[0] for point in a]
     y_coords = [point[1] for point in a]
     ans.append(ans[0])
